@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+namespace 随机点名
+{
+    static class Program
+    {
+        /// <summary>
+        /// 应用程序的主入口点。
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            if (File.Exists("C:\\Users\\Administrator\\Documents\\dcdm\\prepare"))
+            {
+                Application.Run(new Form2());
+            }
+            else
+            {
+                Application.Run(new Form1());
+            }
+        }
+    }
+}
